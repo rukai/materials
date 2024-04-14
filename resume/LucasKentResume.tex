@@ -1,0 +1,108 @@
+\documentclass[line, resMargin, a4paper]{res}
+\usepackage[utf8]{inputenc}
+\textheight=780pt
+\usepackage{times}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\setlist{itemsep=0pt}
+\setlist{leftmargin=10pt}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+\begin{document}
+
+\name{Lucas Kent}
+\address{
+    \href{https://github.com/rukai}{github.com/rukai}\\
+    %50 Candowie Crescent\\ Baulkham Hills 2153\\ 
+    Ph: +61 449 123 093\\
+    Email: rubickent@gmail.com
+}
+
+\begin{resume}
+    \section{Education}
+    \begin{itemize}
+        \item Bachelor of IT major in Software Technology - Macquarie University (2019)
+    \end{itemize}
+
+    \section{Skills}
+    \begin{itemize}
+        \item Languages: Rust, Python, C\#, C, C++, Java, Lua, SQL, HTML, CSS, Javascript
+        \item Tools: Git, Vim, VS Code, Visual Studio, JetBrains IDEs
+        \item Services: AWS, Github Actions
+        %\item OS: Linux, Windows
+    \end{itemize}
+
+    \section{Proffessional Work}
+
+    \textbf{\emph {Full-time Software Developer \href{https://www.instaclustr.com}{Instaclustr (acquired under NetApp) }}} (current employment, 2021-2024)
+    \begin{itemize}
+        \item I am one of two employees in the larger R\&D team working on the \href{https://github.com/shotover/shotover-proxy}{Shotover proxy} (rust)
+        \item Shotover is an open source L7 database proxy
+            \subitem Supports redis, cassandra and kafka
+            \subitem Use cases include load balancing, data encryption and caching
+            \subitem Custom query/response transformations can be written in rust
+        \item \href{https://github.com/shotover/shotover-proxy/pulls?q=author%3Arukai}{My work on shotover} includes feature design, code/test implementation and PR reviews.
+        \item I built \href{https://github.com/shotover/windsock}{windsock}, a DB benchmark framework to support evaluation of shotover performance changes.
+        \item To support my work on shotover I frequently make contributions to open source dependencies when I find bugs or missing features e.g. \href{https://github.com/krojew/cdrs-tokio/pulls?q=author%3Arukai}{cdrs-tokio}, \href{https://github.com/tychedelia/kafka-protocol-rs/pulls?q=is%3Apr+is%3Aclosed+author%3Arukai}{kafka-protocol}
+    \end{itemize}
+
+    \textbf{\emph {Full-time Software Developer \href{http://www.wisetechglobal.com}{WiseTech Global}}} (2016-2021)
+    \begin{itemize}
+        \item Worked in the embedded team working on our truck telematics devices which report truck data such as GPS, fuel, on board mass and tyre pressure. (python, C)
+        \item Worked on CargoWise One our main logistics management software. (C\#, TSQL, WinForms)
+        \item Worked on the messaging system between CargoWise One and external services such as the customs system for various countries. (C\#, TSQL, BizTalk, XSLT)
+        \item Worked on various web-based internal tools. (C\#, TSQL, ASP.NET, Javascript)
+        \item Mentored multiple newstarters on working within my team. (6 months each)
+    \end{itemize}
+
+    \section{Hobby Projects}
+
+    \textbf{\emph {Contributor to the Rust ecosystem}} (2017-2024)
+    \begin{itemize}
+        \item I have made \href{https://github.com/rust-lang/rust/pulls?q=author%3Arukai}{some contributions} to rustc itself
+            \subitem Most of my contributions are to rust's diagnostics, my favorite part of the language
+        \item I have made a lot of contributions to existing libraries in the Rust ecosystem including:
+        \subitem \href{https://github.com/gfx-rs/wgpu/pulls?utf8=%E2%9C%93&q=author%3Arukai}{wgpu} - Implementation of WebGPU used by Firefox
+        \subitem \href{https://github.com/rust-windowing/winit/pulls?utf8=%E2%9C%93&q=author%3Arukai+}{Winit} - Cross platform Rust windowing library
+        \subitem \href{https://github.com/vulkano-rs/vulkano/pulls?utf8=%E2%9C%93&q=author%3Arukai}{Vulkano} - High level Rust vulkan bindings
+        \item I have also made some libraries of my own:
+        \subitem \href{https://github.com/rukai/winit_input_helper}{Winit Input Helper} - Processes winit events, allowing inputs to be queried at any time
+        \subitem \href{https://github.com/rukai/ggbasm}{GGBASM} - Assembler for Gameboy accessed via a Rust library API
+        \subitem \href{https://github.com/rukai/treeflection}{Treeflection} - Pseudo-reflection functionality for Rust
+        \subitem \href{https://github.com/rukai/cargo-run-wasm}{cargo run-wasm} - Trivially run wasm applications and examples in the browser
+    \end{itemize}
+
+    \textbf{\emph {\href{https://github.com/rukai/DPedal}{DPedal} - USB directional pedal}} (2023)
+    \begin{itemize}
+        \item 3D printable mechanical parts designed in \href{https://cad.onshape.com/documents/b3650977a607511c32026f52/w/79027c5ddd8ad99ee7db1e2a/e/7192077cb58abe7f31bd20c3?renderMode=0&uiState=63ad8d5084623c01cce27891}{Onshape}.
+        \item PCB designed in kicad with reference to an open source keyboard.
+        \item Firmware written in rust, makes HID keyboard and mouse events in response to input.
+        \item Custom flashing application writes the firmware and configuration to the device.
+    \end{itemize}
+
+    \newpage
+
+    \textbf{\emph{Super Smash Bros related projects - Tools for smash players and my own engine/game}} (2016-2022)
+    \begin{itemize}
+        \item \href{https://github.com/rukai/brawllib_rs}{brawllib\_rs} - A Rust library for parsing and processing \href{https://en.wikipedia.org/wiki/Super_Smash_Bros._Brawl}{Brawl} character files.
+        \item \href{https://rukaidata.com/PM3.6/Marth/subactions/Attack11.html}{rukaidata.com} - A framedata website for Brawl/Project M. Generator written in rust and frontend written in rust compiled to wasm, uses brawllib\_rs. Hosted on AWS using EC2, S3, Route53, and cloudfront.
+        \item \href{https://github.com/rukai/PF_Sandbox}{Platform Fighter Sandbox} - An engine for smash-like games, it features a character editor tightly integrated with gameplay. Written in Rust. Can import characters from Brawl via brawllib\_rs.
+        \item \href{https://canoncollision.com}{Canon Collision} - A fork of Platform Fighter Sandbox to allow me to focus on building an actual game without worrying about making a generic engine. I have notably implemented a GLTF 3D renderer since the fork.
+    \end{itemize}
+
+    \textbf{\emph {Contributor to \href{https://github.com/dolphin-emu/dolphin/pulls?q=author\%3Arukai}{Dolphin}}} (2015-2018)
+    \begin{itemize}
+        \item Dolphin is the most complete Gamecube/Wii emulator
+        \item I contributed to the complete UI rewrite from wxWidgets to Qt.
+    \end{itemize}
+
+    \textbf{\emph {Built a slow and incomplete \href{https://github.com/rukai/GameToy}{Gameboy emulator} that boots several games}} (2016)
+
+\end{resume}
+\end{document}
